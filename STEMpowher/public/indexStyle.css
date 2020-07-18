@@ -1,0 +1,162 @@
+title {
+  display: none;
+}
+* {
+    box-sizing: border-box;
+  }
+
+
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.mainContainer {
+  font-family: 'Jost';
+    padding-top: 100px;
+    position: relative;
+    color: white;
+    width: 100%;
+    margin: auto;
+
+   
+  }
+.mainContainer img {
+
+  width:100%;
+  height:700px;
+  display:block;
+  object-fit:cover;
+
+   
+  }
+
+
+  .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    text-align:center;
+
+
+  
+  }
+
+  .centered h1 {
+    padding-top:100px;
+	  font-weight: 700;
+	  letter-spacing:11.2px;
+    font-size: 80px;
+    line-height:250px;
+    text-transform: uppercase;
+
+    
+}
+  
+.centered p1{
+    font-size: 20px;
+    font-style:italic;
+    font-weight:700;
+    letter-spacing:3px;
+    line-height:44px;
+
+  }
+
+.centered a{
+color: white;
+}
+
+.centered a:hover{
+color:Gainsboro;
+text-decoration: none;
+}
+
+.threeBlock{
+    
+  margin:0 auto;
+  padding-top: 80px;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-bottom:70px;
+
+}
+.threeBlock th{
+  text-align: center;
+  font-style: normal;
+  font-weight: lighter;
+  padding: 15px;
+  font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:black;  
+}
+
+.threeBlock td{
+  text-align: center;
+  padding : 15px;
+  color:gray;
+}
+
+div.threeBlock {
+
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+ 
+}
+
+
+
+div.polaroid {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  width:25.66%;
+  margin: 10px;
+  display: inline-block;
+
+}
+
+
+div.polaroid a:hover { 
+    text-decoration:none
+
+} 
+
+div.container {
+  padding: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: black;
+letter-spacing:1.2px;
+}
+
+.entireCarousel{
+  width:60%;
+  margin: 20px;
+  margin: auto;
+      
+}
+
+.carousel{
+  padding-top: 100px;
+  background: transparent;
+}
+.carousel-item{
+  text-align: center;
+}
+.carousel-item a:hover { 
+  text-decoration:none
+
+}
+
+.carousel-item img {
+  height:250px;
+  width:150px;
+  object-fit:cover;
+}
+
+
+
+

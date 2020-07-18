@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162648193-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162648193-1');
+</script>
+
+
+	<link rel="stylesheet" href="researchStyle.css" type="text/css" media="all">
+	<link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+		</script>
+
+	<script>
+		$(function () {
+			$("#header").load("nav.html");
+			$("#footer").load("footer.html");
+		});
+	</script>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<link rel="icon" href="images/favicon.png">
+
+
+	<script>
+
+
+
+		window.onload = function () {
+
+			var chart1 = new CanvasJS.Chart("chartContainer1", {
+
+				animationEnabled: true,
+				title: {
+					text: "What AP STEM classes have you taken?",
+					fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
+					fontSize: 15,
+                                        padding: 20,
+				},
+				axisY: {
+					suffix: "%",
+					lineColor: "light grey",
+					labelFontColor: "black",
+					gridColor: "#e6e2de",
+					tickThickness: 0,
+					lineThickness: 0,
+				},
+
+				axisX: {
+					tickThickness: 0,
+				},
+				toolTip: {
+					shared: true
+				},
+				legend: {
+					cursor: "pointer",
+					itemclick: toggleDataSeries
+				},
+				data: [{
+					type: "column",
+					color: "#b1e8ed",
+					toolTipContent: "<b>{name}:</b> {y}%",
+					name: "Female",
+					legendText: "Female",
+					showInLegend: true,
+					dataPoints: [
+			             		{ y: 39.3, label: "Biology" },
+						{ y: 35.7, label: "Calculus" },
+						{ y: 32.1, label: "Chemistry" },
+						{ y: 21.4, label: "Physics" },
+						{ y: 10.7, label: "Statistics" },
+						{ y: 7.1, label: "Computer Science" },
+						{ y: 16.1, label: "Other" }
+					]
+				},
+				{
+					type: "column",
+					color: "#e6f8f9",
+					toolTipContent: "<b>{name}:</b> {y}%",
+					name: "Male",
+					legendText: "Male",
+					showInLegend: true,
+					dataPoints: [
+						{ y: 25.8, label: "Biology" },
+						{ y: 25.8, label: "Calculus" },
+						{ y: 22.7, label: "Chemistry" },
+						{ y: 37.9, label: "Physics" },
+						{ y: 22.7, label: "Statistics" },
+						{ y: 16.7, label: "Computer Science" },
+						{ y: 22.7, label: "Other" }
+					]
+				}]
+			});
+			chart1.render();
+
+			function toggleDataSeries(e) {
+				if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+					e.dataSeries.visible = false;
+				}
+				else {
+					e.dataSeries.visible = true;
+				}
+				chart1.render();
+			}
+
+
+
+
+
+			var chart2 = new CanvasJS.Chart("chartContainer2", {
+
+				animationEnabled: true,
+				title: {
+					text: "What is your favorite subject in school?",
+					fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
+					fontSize: 15,
+   					padding: 20,
+				},
+				axisY: {
+					suffix: "%",
+					lineColor: "light grey",
+					labelFontColor: "black",
+					gridColor: "#e6e2de",               
+					tickThickness: 0,
+					lineThickness: 0,
+				},
+
+				axisX: {
+					tickThickness: 0,
+				},
+				toolTip: {
+					shared: true
+				},
+				legend: {
+					cursor: "pointer",
+					itemclick: toggleDataSeries
+				},
+				data: [{
+					type: "column",
+					color: "#d99e9e",
+					toolTipContent: "<b>{name}:</b> {y}%",
+					name: "Female",
+					legendText: "Female",
+					showInLegend: true,
+					dataPoints: [
+						{ y: 26.8, label: "Science" },
+						{ y: 16.1, label: "Art" },
+						{ y: 16.1, label: "English" },
+						{ y: 14.3, label: "History" },
+						{ y: 21.4, label: "Physics" },
+						{ y: 12.5, label: "Math" },
+						{ y: 14.3, label: "Other" }
+					]
+				},
+				{
+					type: "column",
+					color: "#f0dada",
+					toolTipContent: "<b>{name}:</b> {y}%",
+					name: "Male",
+					legendText: "Male",
+					showInLegend: true,
+					dataPoints: [
+						{ y: 27.3, label: "Science" },
+						{ y: 0, label: "Art" },
+						{ y: 3, label: "English" },
+						{ y: 16.7, label: "History" },
+						{ y: 21.4, label: "Physics" },
+						{ y: 21.2, label: "Math" },
+						{ y: 31.8, label: "Other" }
+					]
+				}]
+			});
+			chart2.render();
+
+			function toggleDataSeries(e) {
+				if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+					e.dataSeries.visible = false;
+				}
+				else {
+					e.dataSeries.visible = true;
+				}
+				chart2.render();
+			}
+
+
+
+			var chart3 = new CanvasJS.Chart("chartContainer3", {
+
+				animationEnabled: true,
+				title: {
+					text: "I think girls have a disadvantage to boys in pursuing STEM",
+					fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
+					fontSize: 15,
+ 					padding: 20,
+				},
+				axisY: {
+					suffix: "%",
+					lineColor: "light grey",
+					labelFontColor: "black",
+					gridColor: "#e6e2de",
+					tickThickness: 0,
+					lineThickness: 0,
+				},
+
+				axisX: {
+					tickThickness: 0,
+				},
+				toolTip: {
+					shared: true
+				},
+				legend: {
+					cursor: "pointer",
+					itemclick: toggleDataSeries
+				},
+				data: [{
+					type: "column",
+					color: "#8186d5",
+					toolTipContent: "<b>{name}:</b> {y}%",
+					name: "Female",
+					legendText: "Female",
+					showInLegend: true,
+					dataPoints: [
+						{ y: 14.3, label: "1 (Disagree)" },
+						{ y: 16.1, label: "2" },
+						{ y: 19.6, label: "3" },
+						{ y: 33.9, label: "4" },
+						{ y: 16.1, label: "5 (Agree)" }
+					]
+				},
+				{
+					type: "column",
+					color: "#c6cbef",
+					toolTipContent: "<b>{name}:</b> {y}%",
+					name: "Male",
+					legendText: "Male",
+					showInLegend: true,
+					dataPoints: [
+						{ y: 28.8, label: "1 (Disagree)" },
+						{ y: 25.8, label: "2" },
+						{ y: 22.7, label: "3" },
+						{ y: 15.2, label: "4" },
+						{ y: 7.6, label: "5 (Agree)" }
+					]
+				}]
+			});
+			chart3.render();
+
+			function toggleDataSeries(e) {
+				if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+					e.dataSeries.visible = false;
+				}
+				else {
+					e.dataSeries.visible = true;
+				}
+				chart3.render();
+			}
+
+			var chart4 = new CanvasJS.Chart("chartContainer4", {
+
+				animationEnabled: true,
+				title: {
+					text: "I think it's difficult to find interesting STEM oppurtunities",
+					fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
+					fontSize: 15,
+   					padding: 20,
+
+
+
+				},
+				axisY: {
+					suffix: "%",
+					lineColor: "light grey",
+					labelFontColor: "black",
+					gridColor: "#e6e2de",
+					tickThickness: 0,
+					lineThickness: 0,
+   				
+				},
+
+				axisX: {
+					tickThickness: 0,
+   					
+				},
+				toolTip: {
+					shared: true
+				},
+				legend: {
+					cursor: "pointer",
+					itemclick: toggleDataSeries
+				},
+				data: [{
+					type: "column",
+					color: "#84cf9b",
+					toolTipContent: "<b>{name}:</b> {y}%",
+					name: "Female",
+					legendText: "Female",
+					showInLegend: true,
+					dataPoints: [
+						{ y: 14.3, label: "1 (Disagree)" },
+						{ y: 23.2, label: "2" },
+						{ y: 26.8, label: "3" },
+						{ y: 23.2, label: "4" },
+						{ y: 12.5, label: "5 (Agree)" }
+					]
+				},
+				{
+					type: "column",
+					color: "#c2e8ce",
+					toolTipContent: "<b>{name}:</b> {y}%",
+					name: "Male",
+					legendText: "Male",
+					showInLegend: true,
+					dataPoints: [
+						{ y: 19.7, label: "1 (Disagree)" },
+						{ y: 25.8, label: "2" },
+						{ y: 31.8, label: "3" },
+						{ y: 13.6, label: "4" },
+						{ y: 9.1, label: "5 (Agree)" }
+					]
+				}]
+			});
+			chart4.render();
+
+			function toggleDataSeries(e) {
+				if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+					e.dataSeries.visible = false;
+				}
+				else {
+					e.dataSeries.visible = true;
+				}
+				chart4.render();
+			}
+		}
+
+
+
+
+</script>
+</head>
+
+
+<body id = "research">
+	
+<div id="header"></div>
+		
+	<div class="mainContainer">
+
+		<img src="images/yellowresearch.jpg" title="home"">
+
+
+	 <div class="centered">
+
+            <h1>RESEARCH</h1>
+                   
+                      <p1> 
+			We surveyed students in our community about their classes, interests, and personal opinions on female representation in STEM
+                    </p1>
+        </div>      
+        </div>
+<script src="canvasjs.min.js"></script>
+
+<table id = "row1">
+  <tr>
+    <td id = "graph"><div id="chartContainer1"></div></td>
+    <td id = "text1" style="text-align:left"> <img src="images/laptop.png" class="icon"> <br> Over twice the percentage of boys took advanced placement computer science and statistics classes.</td>
+  
+  </tr>
+</table>
+  
+
+<table id = "row">
+<tr>
+    <td id = "text" style="text-align:left"> <img src="images/science.png"  class="icon"><br> 27% of both girls and boys said that science was their favorite subject disproving a common misconception that girls "just aren't interested in STEM"</td>
+    <td id = "graph"><div id="chartContainer2"></div></td>
+
+  </tr>
+</table>
+
+
+<table id = "row1">
+  <tr>
+    <td id = "graph"><div id="chartContainer3"></div></td>
+    <td id = "text1" style="text-align:left"><img src="images/stairs.png"  class="icon"><br> Over twice the percentage of girls thought that it was more difficult for girls in STEM with only 22.9% of boys gave a rating of 4 or 5 compared to 50% of girls.</td>
+ 
+  </tr>
+</table>
+
+
+<table id = "row">
+<tr>
+    <td id = "text" style="text-align:left"> <img src="images/gear.png"  class="icon"> <br> 35.7% of girls thought that it was difficult to find interesting opportunities in STEM, with ratings of 4 or 5, compared to only 22.7% of boys.</td>
+    <td id = "graph"><div id="chartContainer4"></td>
+ 
+  </tr>
+</table>
+
+<br>
+<br>
+<br>
+	
+<div id="footer"></div>
+
+
+</body>
+
+
+
+
+
+
+</html>
