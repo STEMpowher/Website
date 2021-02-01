@@ -4,254 +4,109 @@
 
 <head><title>About</title>
 <meta name="description" content="After noticing ongoing issues of gender diversity and bias towards girls in our robotics club we launched STEMpowher address gender bias in our community. ">
-
-<script>
-
-
- var request = new XMLHttpRequest();
-        request.open("GET", "https://graph.instagram.com/me/media?fields=permalink,media_url,caption&access_token=IGQVJWWVNnbUVKc2l0M21PUDV4RjhLbUhZAQ3k1aThoYXpVYVFCb2VNenNJSS1Ed1d4UWNiakFGX01EUFA3VDV3cm9BZAVNJdzJVd3ZAKakJfTjE5enhpRWEzNHBvQUhDNlgtRl9HSEhYb2pkcjY2cUhlQQZDZD");
-        request.send();
-	request.onload = () => {
-            jsonArray = JSON.parse(request.response);
-
-            for (i = 0; i < 9; i++) {
-
-                imageLink = jsonArray.data[i].media_url;
-                postLink = jsonArray.data[i].permalink;
-
-                var grid = document.getElementById("instaGrid");
-              
-                var link = document.createElement('a');
-                link.setAttribute('href', postLink);
-
-                var image = document.createElement("img");
-                image.src = imageLink;
-
-                link.appendChild(image);
-		
-		grid.appendChild(link); 
-
-              }
-        }
-
-
-
-           
-
-</script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162648193-1"></script>
 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-162648193-1');
-
 </script>
-  
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
+  <link rel="stylesheet" href="aboutStyle.css" type="text/css" media="all">
+  <link rel="icon" href="images/favicon.png">
 
-    <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
-
-    <link rel="stylesheet" href="aboutStyle.css" type="text/css" media="all">
-
-    <link rel="icon" href="images/favicon.png">
-
- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
-    </script>
+</script>
 
 <script>
-   
  $(function(){
     $("#header").load("nav.html"); 
     $("#footer").load("footer.html"); 
   });
-
-
   </script>
-    
-
 </head>
-
 
 <body id = "about">
 
-
-
 <div id="header"></div>
 
-
-    <div class="mainContainer">
-
-        <img src="images/about.png" title="about"">
-        
-	<div class="centered">
-           	
-            <h1>OUR MISSION</h1>
-                    <p1>
-                        Empower girls to pursure STEM
-                    </p1>
-<br>
-<br>
-                    <p2>
-                        During our time in high school robotics, we 
-                        noticed ongoing issues of gender diversity and bias towards female members of the club. Many
-                        girls left the team because they felt singled-out or under-recognized. Realizing that this was an issue in our community, we launched STEMpowher to build an encouraging network for girls in STEM.
-                    </p2>
-        </div>
+<div class="mainContainer">
+  <img src="images/about.png" title="about">     
+    <div class="centered">
+      <h1>
+        OUR MISSION
+      </h1>
+      <p1>
+        Empower girls to pursure STEM
+      </p1>
+      <br>
+      <br>
+      <p2>
+        During our time in high school robotics, we 
+        noticed ongoing issues of gender diversity and bias towards female members of the club. Many
+        girls left the team because they felt singled-out or under-recognized. Realizing that this was an issue in our community, we launched STEMpowher to build an encouraging network for girls in STEM.
+      </p2>
     </div>
-
-
-   
-
+</div>
 
 
 <div class = "team">
 
 <center style="font-size:20px; letter-spacing: 1.9px;" > MEET THE TEAM </center>
 
-
 <table align ="center">
+  <tr>
+    <td>
+      <a href="https://www.linkedin.com/in/andreakha/" target="_blank">
+        <br>
+        <br>
+        <img src="images/andreaProfile.jpg" title="home" style="width: 200px; height:200px">
+        <br>
+        <br>
+        <p1> ANDREA HA </p1>
+        <p> Co-Founder & Web Developer </p>
+      </a>
+    </td>
 
+    <td> 
+      <a href="https://www.linkedin.com/in/krystalgraylin/" target="_blank"> 
+        <br>
+        <br>
+        <img src="images/krystalProfile.PNG" title="home" style="width: 200px; height:200px;">
+        <br>
+        <br>
+        <p1> KRYSTAL GRAYLIN </p1>
+        <p> Co-Founder </p>
+      </a>
+    </td> 
 
-
-<tr>
-
-
-<td>
-<a href="https://www.linkedin.com/in/andreakha/" target="_blank">
-
-  <br>
-  <br>
-  <img src="images/andreaProfile.PNG" title="home" style="width: 200px; height:200px">
-  
-  <br>
-  <br>
-   
-  <p1> ANDREA HA </p1>
-  <p> Co-Founder & Web Developer </p>
-</a>
-</td>
-
-
-
-
-
-<td> 
-<a href="https://www.linkedin.com/in/krystalgraylin/" target="_blank"> 
-
-   <br>
-   <br>
-
-  <img src="images/krystalProfile.PNG" title="home" style="width: 200px; height:200px;">
-
-   <br>
-   <br>
- 
-  <p1> KRYSTAL GRAYLIN </p1>
-   <p> Co-Founder </p>
-</a>
-</td> 
-
-
-
-
-
-<td>  
-<a href="https://www.linkedin.com/in/amandakha/" target="_blank">
-   <br>
-   <br>
-
-    <img src="images/amandaProfile.jpg" title="home" style="width: 200px; height:200px;">
- 
-    <br>
-    <br>
-   
-    <p1> AMANDA HA </p1>
- 
-    <p> Web Developer </p>
-
-</a>
-</td>
-
- </tr>
-  
+    <td>  
+      <a href="https://www.linkedin.com/in/amandakha/" target="_blank">
+        <br>
+        <br>
+        <img src="images/amandaProfile.jpg" title="home" style="width: 200px; height:200px;">
+        <br>
+        <br>
+        <p1> AMANDA HA </p1>
+        <p> Web Developer </p>
+      </a>
+    </td>
+  </tr>  
 </table>
 </div>
+         
+<br>
+<br>
+<br>
 
-           <div class= "instafeed" align="center">
+<div id="footer"></div>
 
-
-                <p1> <a href="https://www.instagram.com/stempowher/" style="text-decoration: none; color:black; letter-spacing:1.7px; font-size:20px">FOLLOW US</a> </p1>
-
-                <br></br>
-
-                   <div id=instaGrid> </div>
-
-
-           </div>
-
-    
-
-    
-        <div class="form">
-
-        <div class="contactTitle">
-
-        <br>
-        <br>
-
-<img src="images/plane.jpg" style= "width:10%">
-
-            <p>
-                CONTACT US
-            </p>
-
-            <p1>
-                Have a story you want to share? Want to collaborate?
-            </p1>
-
-        <br>
-
-        </div>
-
-
-            <form class ="contactForm">
-                <p>
-                    <input type="text" name="name" placeholder="Name" id="name">
-                </p>
-                <p>
-                    <input type="email" name="email" placeholder="Email" id="email">
-                </p>
-                <p>
-                    <input type="text" name="message" placeholder="Message" id="message">
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-
-        <br>
-        <br>
-        </form>
-        </div>
-
-        <br>
-        <br>
-        <br>
-
-
- <div id="footer"></div>
-
-
- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script src="main.js"></script>
 
 </body>
-
-
 </html>

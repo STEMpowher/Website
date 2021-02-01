@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162648193-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162648193-1');
+</script>
+
+	<link rel="stylesheet" href="contactStyle.css" type="text/css" media="all">
+	<link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+	</script>
+
+	<script>
+		$(function () {
+			$("#header").load("nav.html");
+			$("#footer").load("footer.html");
+		});
+	</script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+
+<body id = "contact">
+	
+<div id="header"></div>
+ 
+    <br></br><br></br><br></br>
+    
+    <div class="form">
+        <div class="contactTitle">
+            <br><br>
+            <img src="images/message.gif" style= "width:30px">
+            <br></br>
+            <p>CONTACT US</p>
+        </div>
+        <p> Have a story to share? Want to collaborate?</p>
+        <form class ="contactForm">
+            <p>
+                <input type="text" name="name" placeholder="Name" id="name">
+            </p>
+            <p>
+                <input type="email" name="email" placeholder="Email" id="email">
+            </p>
+            <p>
+                <textarea type="text" name="message" placeholder="Message" id="message"></textarea>
+            </p>
+            <p>
+                <button type="submit">Send</button>
+            </p>
+            <br></br>        
+        </form>
+    </div>
+<br>
+<br>
+<br>
+	
+<div id="footer"></div>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

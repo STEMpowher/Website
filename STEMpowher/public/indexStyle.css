@@ -75,7 +75,6 @@ text-decoration: none;
 .threeBlock{
     
   margin:0 auto;
-  padding-top: 80px;
   font-size: 14px;
   line-height: 1.6;
   padding-bottom:70px;
@@ -153,7 +152,7 @@ letter-spacing:1.2px;
 
 .carousel-item img {
   height:250px;
-  width:150px;
+  width:300px;
   object-fit:cover;
 }
 

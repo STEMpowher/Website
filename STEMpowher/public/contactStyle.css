@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  font-family: "Jost";
+}
+
+    
+.form{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:auto;
+  text-align: center;
+  width: 500px;
+
+} 
+
+
+.contactTitle{
+  text-align: center;
+  padding-left: 30px;
+  padding-right:30px;
+  letter-spacing: 1.2px;
+  padding-bottom: 20px;
+
+}
+
+
+input, textarea{
+  padding:5px; 
+  background-color: rgb(238, 234, 234);
+  width: 75%;
+  line-height: 28px;
+  border-style:solid; 
+  border:none;
+}
+
+textarea{
+  min-height: 120px;
+}
+
+
+input:focus,
+input:hover,
+input:active,
+textarea:focus,
+textarea:hover,
+textarea:active
+  {
+      outline: none;
+      background-color: white;
+      border: 1px solid black;
+}
+
+button[type=submit] {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border: 0;
+    box-shadow: none;
+  }
+
+button[type=submit]:hover {
+  background-color: grey;
+  border-radius: 4px;
+}
+
+
+
+  
